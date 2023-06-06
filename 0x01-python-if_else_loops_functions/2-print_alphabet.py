@@ -1,3 +1,3 @@
-#!/usr/bin/python
-for(int i = 'a', i < 'z', i++)
-    print(f"{i}")
+#!/usr/bin/python3
+for i in range(ord('a'), ord('z') + 1):
+    print("{:c}".format(i), end="")

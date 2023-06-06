@@ -1,0 +1,5 @@
+#!/usr/bin/python3   r g     r h     r h     rh      r y  n   ry   n                                                                                                                                                                                                  
+for i in range(0, 100):   r h  
+    f i ==                                                                                                                                                                                                                                                                                         fh      f     g           ry n    r y  n  r g  n   r y .    r y .   r y  n   r g  print(f"{i}, ", end='')
+    if i  (99):
+        print("")
