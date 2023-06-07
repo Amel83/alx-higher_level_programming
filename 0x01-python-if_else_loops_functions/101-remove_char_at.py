@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
-    def remove_char_at(str, n):
     copy = ''
     j = 0
     for c in str:
