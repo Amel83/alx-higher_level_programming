@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+output = ""
 for i in range(0, 9):
     for j in range(i + 1, 10):
         if j < 8:
-            print("{:d}{:d}, ".format(i, j), end="")
+            output += "{:d}{:d}, ".format(i, j)
         else:
-            print("{:d}{:d}".format(i, j), end="")
+            output += "{:d}{:d}".format(i, j)
             if i == 8 and j == 9:
-                print("")
+                output += ""
                 break
             else:
-                print(", ", end="")
+                output += ", "
+print(output)
