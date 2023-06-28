@@ -4,7 +4,7 @@
 
 class Square:
     """Represents a square.
-    
+
     Attributes:
         __size (int): side of the square
         --position (tuple): position of the object
