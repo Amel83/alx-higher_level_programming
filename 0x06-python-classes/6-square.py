@@ -7,7 +7,7 @@ class Square:
     Attributes:
         __size (int): side of the square
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0,0)):
         """Initializes a new square
         Args:
             size (int): side of a square
@@ -17,12 +17,9 @@ class Square:
             ValueError: value passed < than 0
             TypeError: value passed is not an integer
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        size.self = size
+        self.position = position
+
     def area(self):
         """calculates the area of a square
         Returns:
@@ -59,10 +56,15 @@ class Square:
         """
         if self.__size == 0:
             print()
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print('#', end="")
+            return
+        for i in range(self.__position[1]):
             print()
+            for j in range(self.__size):
+                for spaces in range(self__position[0]):
+                    print(" ", end="")
+                for k in range(self.__size):
+                    print('#', end="")
+                print()
     @property
     def position(self):
         """Returns the current position of the square objects
