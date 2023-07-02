@@ -1,0 +1,60 @@
+# 3-say_my_name.txt
+
+===============================================
+Print the full name test cases 3-say_my_name.py
+===============================================
+
+The function returns full_name ``say_my_name(first_name, last_name="")``.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name(Tesfanesh", "Kedir")
+    My name is Tesfaneshn Kedir
+
+::
+
+    >>> say_my_name("Hiwot Alebachew", "Yonatan II")
+    My name is Hiwot Alebachew Yonatan II
+
+::
+
+    >>> say_my_name("Tesfanesh")
+    My name is Tesfanesh
+
+Invalid Names
+=============
+
+TypeError is raised for parameter insertion whhich are not string.
+
+::
+
+    >>> say_my_name(6, "James")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+empty string
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
