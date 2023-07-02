@@ -9,8 +9,11 @@ The function returns full_name ``say_my_name(first_name, last_name="")``.
 ::
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name(Tesfanesh", "Kedir")
-    My name is Tesfaneshn Kedir
+    >>> say_my_name("Tesfanesh")
+    My name is Tesfanesh
+
+    >>> say_my_name("Tesfanesh", "Kedir")
+    My name is Tesfanesh Kedir
 
 ::
 
@@ -19,42 +22,36 @@ The function returns full_name ``say_my_name(first_name, last_name="")``.
 
 ::
 
-    >>> say_my_name("Tesfanesh")
-    My name is Tesfanesh
-
-Invalid Names
+wrong inputs
 =============
 
-TypeError is raised for parameter insertion whhich are not string.
+Errors raised
 
 ::
-
-    >>> say_my_name(6, "James")
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
-
-::
-
-    >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
-    Traceback (most recent call last):
-    TypeError: last_name must be a string
-
-::
-
-    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
-
-::
-
     >>> say_my_name(None)
     Traceback (most recent call last):
     TypeError: first_name must be a string
-
-empty string
 
 ::
 
     >>> say_my_name()
     Traceback (most recent call last):
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+::
+
+    >>> say_my_name(6, "Tesfanesh")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("Seifu", ["Sky", "Fire", "water"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"Seifu": 6, "Sagatura": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string

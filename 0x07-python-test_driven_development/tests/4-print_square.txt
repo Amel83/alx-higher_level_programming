@@ -19,30 +19,19 @@ Usage
 
 ::
 
-    >>> print_square(4)
-    ####
-    ####
-    ####
-    ####
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
 
-::
-
-    >>> print_square(7)
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-
-when size = 0, the function prints nothing.
-
-::
+:
 
     >>> print_square(0)
 
-size must be an integer. Otherwise, a TypeError is raised.
+Error Raised
+============
 
 ::
 
@@ -51,37 +40,34 @@ size must be an integer. Otherwise, a TypeError is raised.
     TypeError: size must be an integer
 
 ::
-
-    >>> print_square(10.3)
+    
+    >>> print_square(10.5)
     Traceback (most recent call last):
     TypeError: size must be an integer
 
-::
-
-    >>> print_square(None)
-    Traceback (most recent call last):
-    TypeError: size must be an integer
-
-When size < 0, a ValueError is raised.
-
-::
-
-    >>> print_square(-7)
-    Traceback (most recent call last):
-    ValueError: size must be >= 0
-
-Note that type-checking occurs before value-checking.
-
-::
-
-    >>> print_square(-10.5)
-    Traceback (most recent call last):
-    TypeError: size must be an integer
-
-for no arg given
 
 ::
 
     >>> print_square()
     Traceback (most recent call last):
     TypeError: print_square() missing 1 required positional argument: 'size'
+ 
+::
+ 
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+ 
+When size < 0, a ValueError is raised.
+ 
+::
+ 
+    >>> print_square(-7)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+ 
+ ::
+ 
+    >>> print_square(-10.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer

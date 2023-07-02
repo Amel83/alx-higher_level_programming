@@ -79,10 +79,7 @@ if integer or float is not given
 
     >>> matrix = []
     >>> print(matrix_divided(matrix, 3))
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-::
+    []
 
     >>> matrix = [[]]
     >>> print(matrix_divided(matrix, 3))
@@ -104,7 +101,7 @@ lists.
     ...     [1, 2, 3],
     ...     [4, "not a number", 6]
     ... ]
-    >>> print(matrix_divided(matrix, 3))
+    >>> print(matrix_divided(matrix, 4))
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
