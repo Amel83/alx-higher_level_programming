@@ -1,12 +1,12 @@
-import numpy as np
+#!/usr/bin/python3
+"""Module lazy_matrix_mul
+Matrix multiplication using NumPy.
+"""
+import numpy
 
 
 def lazy_matrix_mul(m_a, m_b):
-    matrix_a = np.array(m_a)
-    matrix_b = np.array(m_b)
-
-    if matrix_a.shape[1] != matrix_b.shape[0]:
-        raise ValueError("Matrices cannot be multiplied")
-
-    result = np.matmul(matrix_a, matrix_b)
-    return result.tolist()
+    """Multiplies m_a and m_b using
+    matmul, and returns the result.
+    """
+    return numpy.matmul(m_a, m_b)
