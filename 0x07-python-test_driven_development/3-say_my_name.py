@@ -1,4 +1,4 @@
-#!/usr/bin/pythin3
+#!/usr/bin/python3
 def say_my_name(first_name, last_name=""):
     """
     Prints the name in the format "My name is <first name> <last name>".
