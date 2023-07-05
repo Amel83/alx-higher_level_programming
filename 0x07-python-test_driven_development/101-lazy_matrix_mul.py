@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def lazy_matrix_mul(m_a, m_b):
     matrix_a = np.array(m_a)
     matrix_b = np.array(m_b)

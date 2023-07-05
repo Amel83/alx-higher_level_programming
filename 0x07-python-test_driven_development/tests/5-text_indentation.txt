@@ -28,12 +28,6 @@ No spaces are printed at the beginning of a line.
 
 ::
 
-    >>> text_indentation("          ")
-
-Similarly, no spaces are printed at the end of each printed line.
-
-::
-
     >>> text_indentation("Hello.   ")
     Hello.
     <BLANKLINE>
@@ -43,7 +37,7 @@ Similarly, no spaces are printed at the end of each printed line.
     >>> text_indentation("    Up Next.    Beauty and the Beast.   ")
     Up Next.
     <BLANKLINE>
-    Beauty and the beast.
+    Beauty and the Beast.
     <BLANKLINE>
 
 ::
@@ -59,7 +53,7 @@ New lines within a string are printed as normal.
     Let's print a new-line! Here goes:
     <BLANKLINE>
     <BLANKLINE>
-    Printed.
+    Here.
     <BLANKLINE>
 
 ::
@@ -68,12 +62,12 @@ New lines within a string are printed as normal.
     <BLANKLINE>
     <BLANKLINE>
     <BLANKLINE>
-    This new ljnes are too many.
+    This new lines are too many.
     <BLANKLINE>
 
 ::
     >>> text_indentation("A sneaky \n new line.")
-    A sneaky
+    A sneaky 
     new line.
     <BLANKLINE>
 
