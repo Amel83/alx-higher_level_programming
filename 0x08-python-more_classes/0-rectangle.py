@@ -5,4 +5,3 @@
 class Rectangle:
     """Class that defines properties of rectangle.
     """
-    pass
