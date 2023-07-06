@@ -54,10 +54,14 @@ class Rectangle:
             gives the size in #
         """
         if self.__width == 0 or self.__height == 0:
-            print()
+            return""
         r = ''
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 r += '#'
             r += '\n'
         return r[:-1]
+
+    def __repr__(self):
+        """ who knows """
+        return "Rectangle({}, {})".format(self.width, self.height)
