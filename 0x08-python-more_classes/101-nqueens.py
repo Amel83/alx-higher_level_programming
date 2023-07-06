@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+
+nqueens
+"""
 import sys
 
 
