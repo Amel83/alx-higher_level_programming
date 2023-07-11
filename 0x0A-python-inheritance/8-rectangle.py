@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""inherits from BaseGeometry"""
+"""inherits BaseGeometry"""
 
 
 class BaseGeometry:
