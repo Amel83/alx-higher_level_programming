@@ -18,6 +18,12 @@ given values are of type int
     >>> my_list.print_sorted()
     [9]
 
+    Negative ints list test:
+    
+    >>> my_list = MyList([-1000, -98, -232565, 0, -23423434, -123])
+    >>> ml.print_sorted()
+    [-23423434, -232565, -1000, -123, -98, 0]
+
     1st element larger
 
     >>> my_list = MyList([9, 4, 2, 3, 5])
