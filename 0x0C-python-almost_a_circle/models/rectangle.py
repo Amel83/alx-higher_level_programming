@@ -93,6 +93,19 @@ class Rectangle(Base):
 
         def __str__(self):
         """Return the print() and str() representation."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x, self.y,
-                                                       self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x, self.y, self.width, self.height)
+
+    def to_dictionary(self):
+    """ repr in __dict__"""
+
+    def to_dictionary(self):
+        """Return the __dict__ repr Rec."""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+
+
