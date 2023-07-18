@@ -11,7 +11,8 @@ class Base:
     """
     __nb_objects = 0
     def __init__(self, id=None):
-        """'intializes
+        """
+        intializes
         Args:
             id (int): identity
         """
@@ -24,7 +25,7 @@ class Base:
     @statimethod
     def to_json_string(list_dictionaries):
         """ change to json repr"""
-        list_dictionaries[]
+        list_dictionaries = []
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
