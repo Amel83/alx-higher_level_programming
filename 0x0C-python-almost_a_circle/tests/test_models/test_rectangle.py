@@ -377,7 +377,7 @@ class TestRectangle_y(unittest.TestCase):
             Rectangle(1, 2, 3, memoryview(b'aabbccd'))
 
     def test_negative_y(self):
-        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(3, 5, 0, -10)
 
 
