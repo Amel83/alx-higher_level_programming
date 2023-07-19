@@ -3,14 +3,13 @@
 import json
 
 
-
 class Base:
     """ the main class called Base
     Attributes:
         __nb_objects (int): to count
     """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """
         intializes
@@ -21,7 +20,7 @@ class Base:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects 
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -33,7 +32,7 @@ class Base:
     @staticmethod
     def save_to_file(cls, list_objs):
         """change to file
-    
+
         Args:
             list_objs (list): A list of inherited.
         """
