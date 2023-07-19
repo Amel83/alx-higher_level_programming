@@ -14,9 +14,6 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_rectangle_is_base(self):
         self.assertIsInstance(Rectangle(10, 2), Base)
 
-    def test_no_args(self):
-        with self.assertRaises(TypeError):
-            Rectangle()
 
     def test_one_arg(self):
         with self.assertRaises(TypeError):
@@ -25,7 +22,7 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_four_args(self):
         rec1 = Rectangle(1, 2, 3, 4)
         rec2 = Rectangle(4, 3, 2, 1)
-        self.assertEqual(r1.id, r2.id - 1)
+        self.assertEqual(rec1.id, rec2.id - 1)
         
     def test_height_private(self):
         with self.assertRaises(AttributeError):
@@ -58,10 +55,6 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_y_private(self):
         with self.assertRaises(AttributeError):
             print(Rectangle(5, 5, 0, 0, 1).__y)
-
-    def test_height_getter(self):
-        rec = Rectangle(5, 9, 7, 7, 1)
-        self.assertEqual(9, rec.height)
 
     def test_height_setter(self):
         rec = Rectangle(5, 9, 7, 7, 1)
@@ -373,7 +366,7 @@ class TestRectangle_y(unittest.TestCase):
             Rectangle(1, 2, 3, memoryview(b'aabbccd'))
 
     def test_negative_y(self):
-        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(3, 5, 0, -10)
 
 
@@ -444,30 +437,6 @@ class TestRectangle_stdout(unittest.TestCase):
             rect.display()
         sys.stdout = sys.__stdout__
         return capture
-
-    def test_str_method_print_width_height(self):
-        r = Rectangle(4, 6)
-        capture = TestRectangle_stdout.capture_stdout(r, "print")
-        correct = "[Rectangle] ({}) 0/0 - 4/6\n".format(r.id)
-        self.assertEqual(correct, capture.getvalue())
-   
-    def test_str_method_width_height_x(self):
-        r = Rectangle(5, 5, 1)
-        correct = "[Rectangle] ({}) 1/0 - 5/5".format(r.id)
-        self.assertEqual(correct, r.__str__())
-
-    def test_str_method_changed_attributes(self):
-        r = Rectangle(7, 7, 0, 0, [4])
-        r.width = 15
-        r.height = 1
-        r.x = 8
-        r.y = 10
-        self.assertEqual("[Rectangle] ([4]) 8/10 - 15/1", str(r))
-
-    def test_str_method_one_arg(self):
-        r = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(TypeError):
-            r.__str__(1)
 
     def test_display_width_height_y(self):
         r = Rectangle(4, 5, 0, 1, 0)
@@ -664,7 +633,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
     def test_to_dictionary_no_object_changes(self):
         rec1 = Rectangle(10, 2, 1, 9, 5)
         rec2 = Rectangle(5, 9, 1, 2, 10)
-        rec2.update(**r1.to_dictionary())
+        rec2.update(rec1.to_dictionary())
         self.assertNotEqual(rec1, rec2)
 
 

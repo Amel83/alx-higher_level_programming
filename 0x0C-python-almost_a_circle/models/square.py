@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """square"""
-from rectangle.py import Rectangle
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """square class"""
