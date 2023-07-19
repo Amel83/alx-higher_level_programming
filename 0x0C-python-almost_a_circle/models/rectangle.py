@@ -52,7 +52,7 @@ class Rectangle(Base):
     
     @property
     def x(self):
-        """int why meeee i amnot writing a comment goyt you""
+        """int why meeee i amnot writing a comment goyt you"""
         return self.__x
 
     @x.setter
@@ -96,7 +96,7 @@ class Rectangle(Base):
 
     
     def to_dictionary(self):
-        """Return the __dict__ repr Rec."""
+        """Return the __dict__ repr Rec. this is not a short one"""
         return {
             "id": self.id,
             "width": self.width,
