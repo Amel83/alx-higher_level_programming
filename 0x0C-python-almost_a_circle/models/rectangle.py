@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""rectangle class"""
+"""rectangle class is this too short for you too"""
 from models.base import Base
 
 
@@ -23,7 +23,7 @@ class Rectangle(Base):
     
     @property
     def width(self):
-        """width setter"""
+        """width setter why is this not over yet"""
         return self.__width
 
     @width.setter
@@ -36,12 +36,12 @@ class Rectangle(Base):
     
     @property
     def height(self):
-        """height of rec"""
+        """height of rec reading books is the best prize you can give to your mind"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter"""
+        """setter nonsense do you love animation moveis"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -50,12 +50,12 @@ class Rectangle(Base):
     
     @property
     def x(self):
-        """int"""
+        """int why meeee i amnot writing a comment goyt you""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """setter"""
+        """setter- i am in love nope i have a crush"""
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -64,12 +64,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """int"""
+        """int to get me stuck on this project"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """setter"""
+        """setter- why do you check the length of\the character"""
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -77,11 +77,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """area"""
+        """area- you guys are makjng me intelligent"""
         return self.height * self.width
     
     def display(self):
-        """ print rec in # symbol"""
+        """ print rec in # symbol- hahaha hahaha hahaha"""
         if self.width == 0 or self.height == 0:
             print("")
             return
