@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a base model class."""
-import jsosn
-
+import json
 
 
 class Base:
@@ -10,8 +9,10 @@ class Base:
         __nb_objects (int): to count
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
-        """'intializes
+        """
+        intializes
         Args:
             id (int): identity
         """
@@ -19,23 +20,22 @@ class Base:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects 
+            self.id = Base.__nb_objects
 
-    @statimethod
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ change to json repr"""
-        list_dictionaries[]
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    @staticmethos
+    @staticmethod
     def save_to_file(cls, list_objs):
-    """change to file
-    
-    Args:
-        list_objs (list): A list of inherited.
-    """
+        """change to file
+
+        Args:
+            list_objs (list): A list of inherited.
+        """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
             if list_objs is None:
@@ -72,6 +72,7 @@ class Base:
             new.update(**dictionary)
             return new
 
+    @classmethod
     def load_from_file(cls):
         """to instantiate list
         Returns:
@@ -84,12 +85,3 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-
-
-
-        
-        
-
-
-
-

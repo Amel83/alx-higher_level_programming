@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""rectangle class"""
+"""this is nonsense rectangle class is this too short for you too"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """represent a rectangle class"""
-    
-    def __init__(self, width, height, x=0, y=0, id=None): 
-        """intializes
+    """represent a rectangle class pyco leave me alone"""
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """intializes stupidity i am tired
+
         Args:
             width (int): side of rec
             height (int): side of re
@@ -20,86 +20,81 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
-    @propertiy
+
+    @property
     def width(self):
-        """width setter"""
+        """width setter why is this not over yet. battle  i will win"""
         return self.__width
 
     @width.setter
     def width(self, value):
-    if type(value) != int:
-        raise TypeError("width must be an jnteger")
-    if value <= 0:
-        raise ValueError("width must be > 0")
-    self.width = value
-    
-    @propertiy
+        """forgot to documemt you, so i scored zeroooo. sera fet yehonk"""
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    @property
     def height(self):
-        """height of rec"""
+        """reading books is the best prize you can give to your mind"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter"""
+        """setter nonsense do you love animation moveis"""
         if type(value) != int:
-            raise TypeError("height must be an int")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("value must be > 0")
-        self.__height = height
-    @propertiy
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    @property
     def x(self):
-        """int"""
+        """int why meeee i amnot writing a comment goyt you"""
         return self.__x
 
-    @height.setter
-    def height(self, value):
-        """setter"""
+    @x.setter
+    def x(self, value):
+        """setter- i am in love nope i have a crush. i will defeat you"""
         if type(value) != int:
-            raise TypeError("x must be an int")
-        if value <= 0:
-            raise ValueError("x must be > 0")
-        self.__x = x
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
 
-    @propertiy
+    @property
     def y(self):
-        """int"""
+        """int to get me stuck on this project. i am not giving uo on this"""
         return self.__y
 
-    @height.setter
+    @y.setter
     def y(self, value):
-        """setter"""
+        """setter- why do you check the length of\the character"""
         if type(value) != int:
-            raise TypeError("y must be an int")
-        if value <= 0:
-            raise ValueError("y must be > 0")
-        self.__y = y
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
 
     def area(self):
-        """area"""
+        """area- you guys are makjng me intelligent. which is your problem"""
         return self.height * self.width
-    
+
     def display(self):
-        """ print rec in # symbol"""
+        """ print rec in # symbol- hahaha hahaha hahaha. stop this nonsense"""
         if self.width == 0 or self.height == 0:
             print("")
             return
 
-        for i in range(0, height):
-            for j in range(0, width):
-                print("#", end="")
-                width += 1
-            print()
-
-        def __str__(self):
-        """Return the print() and str() representation."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x, self.y, self.width, self.height)
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def to_dictionary(self):
-    """ repr in __dict__"""
-
-    def to_dictionary(self):
-        """Return the __dict__ repr Rec."""
+        """Return the __dict__ repr Rec. this is not a short one. muhahaha"""
         return {
             "id": self.id,
             "width": self.width,
@@ -108,4 +103,53 @@ class Rectangle(Base):
             "y": self.y
         }
 
+    def update(self, *args, **kwargs):
+        """Update the Rectangle. docstrin is difficult
 
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
+        if args and len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 3:
+                    self.x = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
+
+        def __str__(self):
+            """Return the print() and str() representation. just tring my luck"""
+            return "[Rectangle] ({}) {}/{} - {}/{}"
+                                .format(self.id, self.x, self.y, self.width, self.height)
