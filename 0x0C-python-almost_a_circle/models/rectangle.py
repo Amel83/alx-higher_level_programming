@@ -5,10 +5,9 @@ from models.base import Base
 
 class Rectangle(Base):
     """represent a rectangle class"""
-    
-    def __init__(self, width, height, x=0, y=0, id=None): 
+    def __init__(self, width, height, x=0, y=0, id=None):
         """intializes
-        
+
         Args:
             width (int): side of rec
             height (int): side of re
@@ -21,7 +20,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """width setter why is this not over yet"""
@@ -35,10 +34,10 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
-        """height of rec reading books is the best prize you can give to your mind"""
+        """reading books is the best prize you can give to your mind"""
         return self.__height
 
     @height.setter
@@ -49,7 +48,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    
+
     @property
     def x(self):
         """int why meeee i amnot writing a comment goyt you"""
@@ -81,7 +80,7 @@ class Rectangle(Base):
     def area(self):
         """area- you guys are makjng me intelligent"""
         return self.height * self.width
-    
+
     def display(self):
         """ print rec in # symbol- hahaha hahaha hahaha"""
         if self.width == 0 or self.height == 0:
@@ -94,7 +93,6 @@ class Rectangle(Base):
             [print("#", end="") for w in range(self.width)]
             print("")
 
-    
     def to_dictionary(self):
         """Return the __dict__ repr Rec. this is not a short one"""
         return {
@@ -153,4 +151,5 @@ class Rectangle(Base):
 
         def __str__(self):
             """Return the print() and str() representation."""
-            return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x, self.y, self.width, self.height)
+            return "[Rectangle] ({}) {}/{} - {}/{}"
+                                .format(self.id, self.x, self.y, self.width, self.height)
