@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints all City objects from the database hbtn_0e_14_usa.
+Lists all State objects and their corresponding City objects from the database hbtn_0e_101_usa.
 """
 
 import sys
@@ -25,13 +25,14 @@ if __name__ == "__main__":
     session = Session()
 
     try:
-        # Query all City objects sorted by city id
-        cities = session.query(City).order_by(City.id).all()
+        # Query all State objects with their corresponding City objects
+        states = session.query(State).order_by(State.id).all()
 
-        # Print the results
-        for city in cities:
-            state_name = session.query(State).filter(State.id == city.state_id).first().name
-            print("{}: ({}) {}".format(state_name, city.id, city.name))
+        # Loop through the states and their cities, and print the results
+        for state in states:
+            print("{}: {}".format(state.id, state.name))
+            for city in state.cities:
+                print("\t{}: {}".format(city.id, city.name))
     except Exception as e:
         print("Error:", e)
     finally:
