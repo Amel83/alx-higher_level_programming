@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" prints the State object with the name passed as argument from the database
+""" print state object name
 """
 import sys
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":

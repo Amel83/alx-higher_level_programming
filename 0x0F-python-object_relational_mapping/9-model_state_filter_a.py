@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" prints the first State object from the database hbtn_0e_6_usa
+""" prints the first State object
 """
 import sys
 from model_state import Base, State
-from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-
+from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
