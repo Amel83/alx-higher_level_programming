@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-""" prints the State object with the name passed as argument from the database
+""" prints the State object 
 """
 import sys
 from relationship_state import Base, State
+from sqlalchemy.orm import relationship
 from relationship_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import relationship
-
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
