@@ -14,7 +14,7 @@ if __name__ == "__main__":
     try:
         for j in range(10):
             print("{}: {}".format(
-                com[i].get("sha"),
-                com[i].get("commit").get("author").get("name")))
+                com[j].get("sha"),
+                com[j].get("commit").get("author").get("name")))
     except IndexError:
         pass
